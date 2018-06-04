@@ -11,31 +11,12 @@ function nowServing(line) {
 
 }
 
-function currentLine2(line){
-  if (line.length > 0) {
-    var curLine = new String("The line is currently:");
-    var str1 = ""
-    for (var i = 0; i < line.length; i++ ){
-      if (i != line.length - 1) {
-        str1 = `${i+1}. ${line[i]},`
-      } else {
-        str1 = `${i+1}. ${line[i]}`
-      }
-      curLine = `${curLine} ${str1}`
-  }
-    return curLine;
-  } else {
-    return ("The line is currently empty.")
-  }
-}
-
 function currentLine(line){
-  if (line.length > 0) {
+  if (line.length) {
     var curLine = [];
     for (var i = 0; i < line.length; i++ ){
       curLine.push(`${i+1}. ${line[i]}`);
     }
-    console.log(`The line is currently: ${curLine.join(', ')}`);
     return (`The line is currently: ${curLine.join(', ')}`);
   } else {
     return ("The line is currently empty.")
