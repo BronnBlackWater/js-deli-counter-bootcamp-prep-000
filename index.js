@@ -35,7 +35,7 @@ function currentLine(line){
     for (var i = 0; i < line.length; i++ ){
       curLine.push(`${i+1}. ${line[i]}`);
     }
-    return (`The line is currently: ${curLine.join(', ')}`;
+    return (`The line is currently: ${curLine.join(', ')}`);
   } else {
     return ("The line is currently empty.")
   }
